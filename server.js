@@ -40,6 +40,10 @@ passportConfig();
 
 //----------------------------------------------------------ROUTES--------------------------------------------------------------//
 
+app.get('/', (req, res)=>{
+    res.status(200).send('<h1>API is working... </h1>');
+});
+
 app.get('/logout', (req, res, next) => {
     req.session.destroy((err)=>{
         if(err) return next(err);
