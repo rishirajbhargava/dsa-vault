@@ -1,0 +1,44 @@
+
+.solved-question{
+    width: 98%;
+    position: relative;
+    height: 40px;
+    padding:13px;
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+    background-color: var(--fourth-color);
+    color:var(--third-color);
+    border:1px solid rgba(41, 75, 76, 0.3)
+}
+.solved-question:hover{
+    background-color: 	hsl(166, 32%, 82%)
+}
+
+
+.solved-links{
+    position: absolute;
+    right:15px;
+    top:10px;
+    display: flex;
+    gap:1.3rem;
+    float:right;
+}
+
+.solved-question a{
+    font-size: .9rem;
+    font-weight: 450;
+    color:var(--second-color);
+}
+.solved-question a i{
+    font-size: 1.1rem;
+    color:var(--third-color);
+}
+
+.solved-links img{
+    width: 17px;
+    cursor: pointer;
+}
+
+
+ 

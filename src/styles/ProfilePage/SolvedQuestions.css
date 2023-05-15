@@ -1,0 +1,42 @@
+
+
+.solved-questions{
+    height:100%;
+    width:100%;
+    padding: 10px;
+    position: relative;
+    overflow-x: hidden;
+}
+.solved-questions h4{
+    color:var(--second-color);
+    margin-bottom: .7rem;
+}
+
+
+.solved-questions-container{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    
+    gap:.5rem;
+    inset:3rem 1rem .5rem 1rem;
+    overflow-y: scroll;
+    
+}
+
+.solved-questions-info{
+    padding : 10px 20px;
+    color:var(--second-color);
+    border-radius: 7px;
+    font-weight: 400;
+    font-style:italic;
+    font-size:  1.1rem;
+    width: 98%;
+    height: 96%;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+

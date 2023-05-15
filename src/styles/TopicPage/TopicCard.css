@@ -1,0 +1,114 @@
+
+
+.topic-card{
+    padding: 1.7rem 2.2rem;
+    position: relative;
+    width: 380px;
+    border-radius: 5px;
+    transition: all 1sec ease-in-out;
+    background-color: var(--fourth-color);
+    border:1px solid rgba(41, 75, 76, 0.3);
+    
+    
+}
+.topic-card:hover{
+    background-color:hsl(166, 32%, 83%);
+    transform: scale(1.03);
+}
+.topic-card h3{
+    font-size: 1.4rem;
+    color:var(--second-color);
+    margin-bottom: 0.7rem;
+}
+.topic-card p{
+    font-weight:500;
+}
+
+
+.margin-util{
+    margin-bottom: .1rem;
+}
+
+.btn-margin{
+    margin-bottom: 1.5rem;
+    color: rgb(45, 137, 89);
+    font-weight: 600;
+}
+
+.topic-card a{
+    background-color: var(--third-color);
+    color:var(--white);
+    text-decoration: none;
+    float: bottom;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size:15px;
+    font-weight: 500;
+
+}
+.topic-card a i{
+    font-size: 15px;
+    margin-left:9px;
+}
+
+.dark-2{
+    background-color: var(--card-color-dark);
+    
+}
+.dark-2 h3{
+    color:var(--fourth-color);
+}
+
+.dark-2 p{
+    color:var(--greyish);
+}
+
+.dark-2 a{
+    color:var(--btn-text-color);
+}
+
+
+.loading-sk-margin{
+    margin-bottom: 1rem;
+}
+
+.dark-2 p{
+    color:var(--fourth-color);
+}
+
+
+.dark-2 .btn-look{
+    color:white;
+}
+
+
+
+.card-para{
+  margin: 0.3rem 0;
+  color: var(--first-color)
+}
+
+
+
+.btn-look{
+    margin-top:1.2rem;
+    background-color:#23898d;
+    width: fit-content;
+    color:white;
+    float: bottom;
+    border-radius: 4px;
+    padding: 7px 10px;
+    font-size:15px;
+    font-weight: 500;
+}
+.dark-2:hover {
+    background-color: hsl(178, 23%, 40%);;
+    transform: scale(1.03);
+}
+
+.dark-2:hover h3{
+    color:var(--second-color);
+} 
+
+
+

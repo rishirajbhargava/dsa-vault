@@ -1,0 +1,103 @@
+
+.problem{
+    display: flex;
+    
+    width:100%;
+    padding:13px;
+    border-radius: 4px;
+    padding-right: 2rem;
+    align-items: center;
+    background-color: var(--fourth-color);
+    color:var(--third-color);
+    border:1px solid rgba(41, 75, 76, 0.3);
+   
+}
+.problem-title{
+    width: 100%;
+    
+}
+
+.problem-title a{
+    font-weight: 500;
+}
+
+.problem a{
+    color:var(--third-color);
+}
+
+.problem-dark{
+    background-color: var(--card-color-dark);
+    color:var(--fourth-color);
+}
+
+.problem-dark a{
+    color:var(--fourth-color);
+}
+
+.problem-links{
+    float:right;
+    right:10px;
+    display: flex;
+    align-items: center;
+    gap:1.3rem;
+}
+
+.problem-links div:nth-child(1){
+    cursor: pointer;
+}
+
+
+.problem:hover, .problem-done:hover {
+    background-color: 	hsl(166, 32%, 81%)
+}
+
+.problem-title{
+    padding-left: 20px;
+}
+
+.checkbox-input{
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.checkbox-size{
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.serial-no{
+    font-weight: 500;
+    padding: 0 10px;
+    color:var(--third-color);
+}
+
+.prob-heading{
+    font-weight: 600;
+    align-items: center;
+}
+
+.problem-links img{
+    width: 21px;
+}
+
+
+.prob-heading div:nth-child(2){
+    margin-right:4px;
+}
+
+.prob-heading div:nth-child(3){
+margin-right:3px;
+}
+
+.problem-done{
+    background-color: rgb(200, 230, 201);
+    color:var(--third-color);
+}
+
+.problem-done a{
+    color:var(--third-color);
+}
+ 
+

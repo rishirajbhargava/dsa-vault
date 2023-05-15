@@ -1,0 +1,13 @@
+
+
+.admin-page{
+    position: absolute;
+    inset:15px;
+    background-color:var(--light-background);
+}
+
+
+.admin-container{
+    margin-top:7vh;
+    padding: 1.5rem;
+}

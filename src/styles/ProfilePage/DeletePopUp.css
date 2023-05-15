@@ -1,0 +1,119 @@
+
+.delete-popup{
+    position: absolute;
+    inset:0;
+    backdrop-filter: blur(1px);
+    background-color: rgba(0, 0, 0, .15);
+    z-index: 9999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-popup-container{
+    position: absolute;
+    max-width: 900px;
+    width: 40%;
+    height: 380px;
+    border-radius: 7px;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+    background-color: rgb(255, 255, 255);
+   
+}
+
+.delete-profile-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    text-align: center; 
+}
+
+.delete-profile-info h3{
+    margin: 10px 0 0 0;
+    color:var(--second-color);
+}
+.delete-profile-info img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+.delete-profile-warning-text{
+    text-align: center;
+}
+
+.delete-profile-warning-text h4{
+    margin: 5px 0 10px 0;
+    font-size: 1.1rem;
+    font-weight: 450;
+    color:rgb(201, 22, 22);
+}
+
+.delete-profile-warning-text p{
+    margin:20px;
+    font-weight: 450;
+    color:grey;
+    font-size: .9rem;
+}
+
+.delete-profile-buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.delete-profile-buttons div{
+   cursor: pointer;
+    padding: 7px 15px;
+    color:white;
+    border-radius: 3px;
+    font-weight: 550;
+    letter-spacing: .02rem;
+    font-size: 14px;
+}
+
+.delete-profile-buttons div:nth-child(2){
+    background-color: red;
+    
+}
+.delete-profile-buttons div:nth-child(1){
+   
+    background-color: rgb(158, 158, 158);
+}
+
+.delete-profile-close-button{
+    position: absolute;
+    cursor: pointer;
+    top:15px;
+    right: 17px;
+}
+
+.delete-profile-close-button i{
+    font-size: 1.5rem;
+  color:rgb(158, 158, 158);
+} 
+
+
+.deleting{
+    position: absolute;
+    inset:0;
+    display: flex;
+    z-index:2;
+    justify-content: center;
+    align-items: center;
+    
+    backdrop-filter: blur(1px);
+    background-color: rgba(69, 69, 69, 0.1);
+}
+.deleting-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

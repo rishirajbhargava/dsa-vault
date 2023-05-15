@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:ital,wght@1,300&display=swap');
+
+:root{
+    --blue: rgb(24, 24, 255);
+    --white: rgb(255, 255, 255);
+    --black: rgb(0, 0, 0);
+    --greyish: rgb(126, 168, 168);
+    --first-color: #2C3333;
+    --second-color: #2E4F4F;
+    --third-color: #0E8388;
+    --fourth-color: #CBE4DE;
+    --highlightColor:#d0e8e3;
+    /* --light-background: #fbfbfb; */
+    --light-background: #f4f4f4;
+    
+    --card-color-light: #ededed;
+    --card-color-dark: #375857;
+    --btn-text-color:rgb(175, 217, 216);
+    --problem-card-color: #d9edea;
+    --landing-page-bg-color:#1c2c2c;
+    --grey-light: #88aaa1;
+    --input-back:#64a5a5;
+    --progress-bar:#198673;
+    --greyafaf:#505050;
+    
+  --font-family: font-family: 'Poppins', sans-serif;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #408787;
+
+}
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+ /* SCROLLBAR CSS */
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--light-background);
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background: var(--third-color) 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--second-color)
+}
+
+
+.App{
+    position: absolute;
+    background-color: var(--light-background);
+    inset:0;
+    overflow: hidden;
+}
+
+.top-svg{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.btm-svg{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.bg-svg{
+  position: absolute;
+  width: 10%;
+  top: 200px;
+  right: 100px;
+  pointer-events: none;
+}
+
+.bg-svg-2{
+  position: absolute;
+  width: 5%;
+  top: 325px;
+  right: 210px;
+  pointer-events: none;
+
+}
+
+
+
+
+.questions{
+  position: absolute;
+  top: 100px;
+  right:100px;
+  z-index:9999;
+}
