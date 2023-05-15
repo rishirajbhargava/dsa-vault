@@ -22,7 +22,7 @@ connectDb();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(cors({origin: 'http://localhost:3000',
+app.use(cors({origin: `${process.env.CLIENT_HOME_PAGE_URL}`,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
 credentials: true}));
 
