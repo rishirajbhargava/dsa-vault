@@ -60,6 +60,14 @@
     color:var(--fourth-color);
     background-color: var(--landing-page-bg-color);
 }
+.header-profile-pic-2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
 
 .header-profile-pic img{
   width: 32px;
@@ -71,12 +79,20 @@
   cursor: pointer;
   
 }
-.header-profile-pic h4{
-  color:var(--second-color);
+
+.header-profile-pic-2 img{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.header-profile-pic h4, .header-profile-pic-2 h4{
+  color:var(--third-color);
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
-  margin-top: 0.5rem;
   font-style: italic;
 
 }

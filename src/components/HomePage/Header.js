@@ -7,7 +7,6 @@ import userProfile from '../../static/user2.svg'
 
 function Header(props) {
 
-  const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [user, setUser] = useState(null);
@@ -99,7 +98,8 @@ function Header(props) {
         <div>
           <i onClick={handleChange} className="fa-solid fa-xmark close-mobile-menu"></i>
           <ul>
-            <li className="header-profile-pic" onClick={() =>
+           
+            <li className="header-profile-pic-2" onClick={() =>
               setIsProfileMenuOpen(true)
             }><img src={user === null ? userProfile : user.photo} alt="img" />
             {user === null ? <h4>Login to Continue</h4> : <h4> {user.displayName}</h4>}
