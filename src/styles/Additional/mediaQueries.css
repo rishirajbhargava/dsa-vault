@@ -304,6 +304,15 @@
   }
 
 
+    .btns{
+      flex-direction: column;
+      gap:6px !important;
+    }
+
+    .btns a{
+      margin: 5px 0;
+    }
+
 
   
 

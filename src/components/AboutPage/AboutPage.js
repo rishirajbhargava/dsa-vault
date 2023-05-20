@@ -40,10 +40,10 @@ function AboutPage(props) {
         </div>
 
         <ul className='about-nav'>
-          <li className='liAsA'><a href='/'>Home</a></li>
+          <li className='liAsA'><a href='/'>HOME</a></li>
           <li onClick={() => {
             setIsFeedbackPopUpOpen(true)
-          }} className='liAsA'>Feedback</li>
+          }} className='liAsA'>FEEDBACK</li>
         </ul>
 
       </motion.div>

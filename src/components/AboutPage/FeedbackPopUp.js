@@ -7,6 +7,7 @@ import axios from 'axios'
 function FeedbackPopUp(props) {
 const [feedback, setFeedback] = React.useState('');
 const [isSendingFeedback, setIsSendingFeedback] = React.useState(false);
+const [isFeedbackSubmitted, setIsFeedbackSubmitted] = React.useState(false);
 
 
 function submitFeedback(){
@@ -14,14 +15,17 @@ function submitFeedback(){
     .then((res)=>{
         if(res.data.success){
             setIsSendingFeedback(false);
+            setIsFeedbackSubmitted(true);
             console.log('Feedback submitted');
         }else{
             setIsSendingFeedback(false);
+            setIsFeedbackSubmitted(false);
             console.log('Error submitting feedback');
         }
     })
     .catch((err)=>{
         setIsSendingFeedback(false);
+        setIsFeedbackSubmitted(false);
         console.log(err);
     })
 
@@ -57,10 +61,11 @@ return (
                     props.setIsFeedbackPopUpOpen(false)
                 }}>     Cancel
                     </div>
-              {props.user===null?<div className='button btn-2'>Submit</div>  :<div onClick={()=>{
+              {props.user===null?<div className='button btn-2'>Submit</div>  : <div onClick={()=>{
                 submitFeedback();
                 setIsSendingFeedback(true);
-              }} className='button'>Submit</div>}
+                                     
+              }} className='button'>Submit{isFeedbackSubmitted ? <span>ted<i className="fa-sharp fa-solid fa-circle-check"></i></span>: null }</div> }
                 </div>
                 
 
