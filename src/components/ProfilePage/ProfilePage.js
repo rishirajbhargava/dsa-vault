@@ -208,7 +208,7 @@ function ProfilePage(props) {
                                                 <i className="fa-solid fa-rotate-left"></i>Reset Progress</motion.li>
 
 
-                                            <motion.li
+                                            {/* <motion.li
 
                                                 initial={{
                                                     opacity: 0,
@@ -229,7 +229,7 @@ function ProfilePage(props) {
 
                                                 className={activeTab === 4 ? 'liAsA active-profile-link' : 'liAsA'}
                                                 onClick={() => setActiveTab(4)}>
-                                                <i className="fa-solid fa-pen-to-square"></i>Edit Profile</motion.li>
+                                                <i className="fa-solid fa-pen-to-square"></i>Edit Profile</motion.li> */}
 
 
                                             <motion.li
@@ -315,6 +315,7 @@ function ProfilePage(props) {
                                      className='user-info-left'>
                                         <img src={user === null ? userProfile : user.photo} alt="user-profile" />
                                         {user === null ? <h3>UserName</h3> : <h3>{user.displayName}</h3>}
+                                        <p>(IIT BHU)</p>
                                     </motion.div>
 
                                     <div className='user-info-right'>

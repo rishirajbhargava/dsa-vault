@@ -4,7 +4,7 @@ import '../../styles/ProfilePage/LogOutPop.css'
 import { motion } from 'framer-motion'
 
 function LogOutPop(props) {
-    const [isLoading, setIsLoading] = React.useState(false);
+    
 
     function logOut(){
         window.open(`${process.env.REACT_APP_BACKEND_URL}/logout`, '_self');
@@ -64,7 +64,6 @@ function LogOutPop(props) {
                             Cancel
                         </div>
                         <div onClick={() => {
-                            setIsLoading(true);
                             logOut();
                         }} >
                             Logout

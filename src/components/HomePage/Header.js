@@ -39,13 +39,9 @@ function Header(props) {
   }, []);
 
   const handleClickOutside = (e) => {
-    if (ref.current && !ref.current.contains(e.target)) {
-      console.log('clicked outside');
+    if (ref.current && !ref.current.contains(e.target)) {  
       setIsProfileMenuOpen(false);
-    } else {
-      console.log('clicked inside');
-    }
-
+    } 
   }
 
 
@@ -70,9 +66,9 @@ function Header(props) {
         <ul>
         
 
-          {props.page === 'profile' ? <li><a href="/">HOME</a></li> : null}
-          <li><a href="/topics">TOPICS</a></li>
-          {props.page === 'profile' ? null : <li><a href="/about">ABOUT US</a></li>}
+          {props.page === 'profile' || props.page==='topics' ? <li><a href="/">HOME</a></li> : null}
+          {props.page === 'topics' ? null: <li><a href="/topics">TOPICS</a></li>}
+          
           <li className="header-profile-pic" onClick={() =>
             setIsProfileMenuOpen(true)
           }><img src={user === null ? userProfile : user.photo} alt="img" /></li>
@@ -85,6 +81,7 @@ function Header(props) {
         <ul className='profile-menu-ul'>
           <li><a href="/">HOME</a></li>
           <li><a href="/profile">PROFILE</a></li>
+          <li><a href="/admin">ADMIN</a></li>
 
           <li className='border-util'><a href="/about">ABOUT</a></li>
           {isUserLoggedIn ? <li className="liAsA" onClick={logOut}> LOGOUT</li> : <li><a href="/login">LOGIN</a></li>}
@@ -109,6 +106,7 @@ function Header(props) {
             <li onClick={handleChange} ><a href="/">HOME</a></li>
             <li onClick={handleChange} ><a href="/topics">TOPICS</a></li>
             <li onClick={handleChange} ><a href="/profile">PROFILE</a></li>
+            <li onClick={handleChange} ><a href="/admin">ADMIN</a></li>
             <li onClick={handleChange} ><a href="/about">ABOUT</a></li>
 
             {user === null ? <li onClick={handleChange} ><a href="/login">LOGIN</a></li> : <li className='liAsA' onClick={() => {

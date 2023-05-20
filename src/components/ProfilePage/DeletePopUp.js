@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from 'react'
+import { React, useState } from 'react'
 import '../../styles/ProfilePage/DeletePopUp.css'
 import userProfile from '../../static/user2.svg'
 import axios from 'axios'

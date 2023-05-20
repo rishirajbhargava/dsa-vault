@@ -61,7 +61,7 @@ function SavedQuestions(props) {
                 return item.map((question) => {
                   return <Solved key={question.Problem} question={question} />
                 })
-              }) : <h4>No Questions Solved</h4>
+              }) : null
               }
 
 

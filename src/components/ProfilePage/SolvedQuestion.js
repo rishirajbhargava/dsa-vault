@@ -73,7 +73,7 @@ function SolvedQuestion(props) {
                 return item.map((question , index) => {
                   return <Solved key={question.Problem} question={question} />
                 })
-              }) : <h4>No Questions Solved</h4>
+              }) : null
               }
 
             </motion.div>

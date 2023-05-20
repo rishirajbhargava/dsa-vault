@@ -10,7 +10,7 @@ const [isSendingFeedback, setIsSendingFeedback] = React.useState(false);
 
 
 function submitFeedback(){
-    axios.post(`${process.env.REACT_APP_BACKEND_URL}/feedback`, {feedback: feedback}, {withCredentials:true})
+    axios.post(`${process.env.REACT_APP_BACKEND_URL}/feedbacks`, {feedback: feedback}, {withCredentials:true})
     .then((res)=>{
         if(res.data.success){
             setIsSendingFeedback(false);
@@ -57,7 +57,10 @@ return (
                     props.setIsFeedbackPopUpOpen(false)
                 }}>     Cancel
                     </div>
-              {props.user===null?<div className='button btn-2'>Submit</div>  :<div onClick={submitFeedback} className='button'>Submit</div>}
+              {props.user===null?<div className='button btn-2'>Submit</div>  :<div onClick={()=>{
+                submitFeedback();
+                setIsSendingFeedback(true);
+              }} className='button'>Submit</div>}
                 </div>
                 
 

@@ -1,8 +1,8 @@
-import {React, useState} from 'react'
+import {React} from 'react'
 import '../../styles/ProfilePage/Solved.css'
-import axios from 'axios';
+
 import leetcodePng from '../../static/leetcode.png'
-import NotePopUp from '../ProblemsPage/NotePopUp';
+
 
 
 
@@ -10,10 +10,6 @@ import NotePopUp from '../ProblemsPage/NotePopUp';
 function Solved(props) {
     const ques = props.question;
    
-
-
-  
-
     return (
         <div className="solved-question">
 

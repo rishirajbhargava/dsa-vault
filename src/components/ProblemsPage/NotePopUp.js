@@ -62,7 +62,7 @@ function NotePopUp({ question, setIsNotePopUpOpen, isNotePopUpOpen }) {
                         : <div className='text-content'>
                             <textarea value={note}
                                 onChange={(e) => { 
-                                    if (e.target.value === 'Add a note here') {
+                                    if (e.target.value === 'Add a note here...') {
                                         setNote('');
                                     } else {
                                         setNote(e.target.value);

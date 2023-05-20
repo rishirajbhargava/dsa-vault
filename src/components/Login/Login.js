@@ -5,11 +5,10 @@ import Header from '../HomePage/Header'
 import Svgs from '../HomePage/Svgs'
 import googlelogo from '../../static/google-logo.png'
 import whiteHome from '../../static/white-home.jpg'
-import ThemeButton from '../AdditionalComponents/ThemeButton'
 import axios from 'axios'
 import Skeleton from 'react-loading-skeleton'
 import {motion } from 'framer-motion'
-import {Link, Navigate } from 'react-router-dom'
+
 
 
 
@@ -23,7 +22,7 @@ function Login(props) {
     const [isAlreadyHaveAccount, setIsAlreadyHaveAccount] = useState(false);
 
         useEffect(() => {
-            axios.get(`${process.env.REACT_APP_BACKEND_URL}/getUser`, { withCredentials: true })
+            axios.get(`${process.env.REACT_APP_BACKEND_URL}/getuser`, { withCredentials: true })
             .then((res) => {
                 console.log(res.data);
                 if(res.data.success){

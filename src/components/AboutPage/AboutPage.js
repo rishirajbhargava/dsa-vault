@@ -61,7 +61,7 @@ function AboutPage(props) {
 
           <motion.h1 initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.27, delay: 0.1 }}>About This Project!</motion.h1 >
+            transition={{ duration: 0.27, delay: 0.1 }}>About This Project!</motion.h1>
 
           <div className='about-text'>
 
@@ -103,7 +103,7 @@ function AboutPage(props) {
               <span>Git Bash</span>
               <span>Font Awesome Icons</span>
               <span>Chrome Developer Tools</span>
-              <span>56 Coffees, Internet & Lots of time.</span>
+              <span>56 Coffees</span> <span>Internet</span> & <span>Lots of time.</span>
 
             </motion.div>
             <br />
@@ -132,13 +132,13 @@ function AboutPage(props) {
 
       </motion.div>
 
-      <motion.footer
+      <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.24, delay: 0.3 }}
 
 
-        className='footer'>
+        className='footer-2'>
 
         <div className='footer-social-media'>
           <ul>
@@ -155,11 +155,11 @@ function AboutPage(props) {
 
 
 
-      </motion.footer>
+      </motion.div>
 
       {/* <ThemeButton theme={props.theme} setTheme={props.setTheme} /> */}
 
-    </div >
+    </div>
   )
 }
 

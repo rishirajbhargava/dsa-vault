@@ -1,4 +1,4 @@
-import { Header, LandingPage,ThemeButton, Topics, Svgs ,AboutPage, ProblemsPage , Login  , ProfilePage , ErrorPage, AdminPage} from './components';
+import { Header, LandingPage, Topics, Svgs ,AboutPage, ProblemsPage , Login  , ProfilePage , ErrorPage, AdminPage} from './components';
 import './styles/Additional/App.css';
 import './styles/Additional/mediaQueries.css';
 import { useState, useEffect } from 'react';
@@ -14,7 +14,7 @@ function App() {
 
 
   useEffect(() => {
-    axios.get('http://localhost:9000/login/success', { withCredentials: true })
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}/login/success`, { withCredentials: true })
       .then(res => {
         if (res.data.success) {
           setUser(res.data.user); 
@@ -33,19 +33,6 @@ function App() {
 
 
   }, []);
-
-
-  // useEffect(() => {
-  //   axios.get('http://localhost:9000/data')
-  //     .then(res => {
-  //       setData(res.data);
-  //     })
-  //     .catch(err => {
-  //       console.log(err);
-  //     })
-
-  // },[isUserLoggedIn])
-
 
 
 
