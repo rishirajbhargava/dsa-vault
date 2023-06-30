@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 
 function AboutPage(props) {
   const [user, setUser] = useState(null);
+
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_BACKEND_URL}/login/success`, { withCredentials: true })
       .then((res) => {
@@ -23,11 +24,23 @@ function AboutPage(props) {
 
 
   const [isFeedbackPopUpOpen, setIsFeedbackPopUpOpen] = useState(false);
+
+
+  function preventScroll() {
+    document.body.style.overflow = 'hidden';
+  }
+
+ 
+
+
+
   const email = 'rishirajbhargava00@gmail.com'
+
+
   return (
     <div className='about-page'>
 
-      {isFeedbackPopUpOpen && <FeedbackPopUp setIsFeedbackPopUpOpen={setIsFeedbackPopUpOpen} user={user} />}
+      {isFeedbackPopUpOpen && <FeedbackPopUp setIsFeedbackPopUpOpen={setIsFeedbackPopUpOpen} user={user}  />}
 
       <motion.div
         initial={{ opacity: 0, y: -50 }}
@@ -42,6 +55,7 @@ function AboutPage(props) {
         <ul className='about-nav'>
           <li className='liAsA'><a href='/'>HOME</a></li>
           <li onClick={() => {
+            preventScroll();
             setIsFeedbackPopUpOpen(true)
           }} className='liAsA'>FEEDBACK</li>
         </ul>
@@ -115,7 +129,10 @@ function AboutPage(props) {
               <br />
               <br />
 
-              If you have any questions or <span className='link' onClick={() => setIsFeedbackPopUpOpen(true)}> suggestions</span>, you can contact me on my <a title='rishirajbhargava00@gmail.com' className='link' href={`mailto:${email}`} target='_blank' rel="noreferrer" >email</a> or on my social media accounts.
+              If you have any questions or <span className='link' onClick={() => {
+                preventScroll();
+                setIsFeedbackPopUpOpen(true)
+              }}> suggestions</span>, you can contact me on my <a title='rishirajbhargava00@gmail.com' className='link' href={`mailto:${email}`} target='_blank' rel="noreferrer" >email</a> or on my social media accounts.
               <br />
               <br />
               Thank you for visiting my website!

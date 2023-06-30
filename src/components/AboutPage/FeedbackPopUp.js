@@ -9,6 +9,9 @@ const [feedback, setFeedback] = React.useState('');
 const [isSendingFeedback, setIsSendingFeedback] = React.useState(false);
 const [isFeedbackSubmitted, setIsFeedbackSubmitted] = React.useState(false);
 
+function allowScroll() {
+    document.body.style.overflow = 'unset';
+  }
 
 function submitFeedback(){
     axios.post(`${process.env.REACT_APP_BACKEND_URL}/feedbacks`, {feedback: feedback}, {withCredentials:true})
@@ -49,7 +52,9 @@ return (
             
             className='feedback-popup'>
 
-                <div className='close-btn' onClick={()=>{props.setIsFeedbackPopUpOpen(false)}}> <i className='fa-solid fa-xmark'></i></div>
+                <div className='close-btn' onClick={()=>{
+                    allowScroll();
+                    props.setIsFeedbackPopUpOpen(false)}}> <i className='fa-solid fa-xmark'></i></div>
                 <h1>Feedback | Dsa-vault  <i class="fa-solid fa-message"></i></h1>
                 {  props.user===null? null: <p className='username-info-feedback'>Submitting feedback as <span>{props.user.displayName} </span> </p>}
                 <textarea value={feedback} onChange={handleChange}></textarea>
@@ -58,6 +63,7 @@ return (
               
                 <div>
                     <div className='button-1'   onClick={()=>{
+                    allowScroll();
                     props.setIsFeedbackPopUpOpen(false)
                 }}>     Cancel
                     </div>

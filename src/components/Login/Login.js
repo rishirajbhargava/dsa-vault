@@ -24,7 +24,7 @@ function Login(props) {
         useEffect(() => {
             axios.get(`${process.env.REACT_APP_BACKEND_URL}/getuser`, { withCredentials: true })
             .then((res) => {
-                console.log(res.data);
+                
                 if(res.data.success){
                     setIsLoading(false);
                     setIsUserLoggedIn(true);
@@ -36,7 +36,7 @@ function Login(props) {
                 }
             })
             .catch((err) => {
-                console.log(err);
+                
                 setIsLoading(false);
                 setIsServerDown(true);
             });
@@ -52,6 +52,10 @@ function Login(props) {
             loginWithGoogle();
         }
 
+        function logOut(){
+            window.open(`${process.env.REACT_APP_BACKEND_URL}/logout`, '_self');
+        }
+        
 
     return (
         <div className='login-page'>
@@ -77,7 +81,7 @@ function Login(props) {
                                     transition={{duration:0.5 ,delay:0.05}}
                                     
                             
-                            >{isAlreadyHaveAccount?  'Signup':  'Login' }<br/> <span className='dsa-vault-logo-login'>Dsa Vault</span></motion.h3>
+                            >Login<br/> <span className='dsa-vault-logo-login'>Dsa Vault</span></motion.h3>
 
                             {isLoading ?< Skeleton  width={290} height={65} className='inputBox'   /> 
                             : 
@@ -106,7 +110,7 @@ function Login(props) {
                                     transition={{duration:0.5 ,delay:0.15}}
                             
                             className="inputBox" onClick={handleClick} >  
-                                    <span ><img src={googlelogo} alt="google-logo"/>{isAlreadyHaveAccount?  'Signup':  'Login' } With Google</span>
+                                    <span ><img src={googlelogo} alt="google-logo"/>Continue With Google</span>
                                     </motion.div>
                                     }</>}
                             </>
@@ -129,11 +133,8 @@ function Login(props) {
                                     transition={{duration:0.5 ,delay:0.45}}
                             
                             className='login-signup-switch'>
-                            { isAlreadyHaveAccount? <p onClick={()=>setIsAlreadyHaveAccount(false)}>
-                                <span className='already-have-account'>Already have an account?</span>
-                            </p>:  <p onClick={()=>setIsAlreadyHaveAccount(true)}>
-                                <span className='already-have-account'>Don't have an account?</span>
-                            </p>}
+                           { isUserLoggedIn ? <p  className='link'onClick={logOut}>Log Out?</p> : <p  className='link'>Leave Site?</p>}
+                           
                            </motion.div>
                      </motion.form>
                      

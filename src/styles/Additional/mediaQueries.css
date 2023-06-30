@@ -366,7 +366,7 @@
 
   .topic-card {
     padding: 1.7rem 2.2rem;
-    width: 335px;
+    width: 380px;
   }
 
 
@@ -416,6 +416,11 @@
   .warning-divs-problem-page {
     width: 320px;
   }
+
+  .topic-card {
+    width: 350px;
+  }
+
 
 
 }

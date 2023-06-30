@@ -313,7 +313,7 @@ function ProfilePage(props) {
                                     }}
                                     
                                      className='user-info-left'>
-                                        <img src={user === null ? userProfile : user.photo} alt="user-profile" />
+                                        <img src={user === null ? userProfile : user.photo} alt="profile" />
                                         {user === null ? <h3>UserName</h3> : <h3>{user.displayName}</h3>}
                                         <p>(IIT BHU)</p>
                                     </motion.div>

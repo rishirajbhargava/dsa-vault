@@ -74,7 +74,7 @@ function ResetPopUp(props) {
 
                     <div className='delete-profile-info'>
 
-                        <img src={props.user === null ? userProfile : props.user.photo} alt="user-profile" />
+                        <img src={props.user === null ? userProfile : props.user.photo} alt="profile" />
                         {props.user === null ? <h3>UserName</h3> : <h3>{props.user.displayName}</h3>}
                     </div>
                     <div className='delete-profile-warning-text'>
